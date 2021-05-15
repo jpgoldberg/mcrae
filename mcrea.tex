@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{csquotes}
+
+\providecommand{\land}{\wedge}
+\providecommand{\lor}{\vee}
+\providecommand{\lif}{\rightarrow}
+\providecommand{\liff}{\leftrightarrow}
+\providecommand{\lnot}{\neg}
+\providecommand{\lfalse}{\bot}
+\providecommand{\lall}{\forall}
+\providecommand{\lis}{\exists}
+\newcommand{\rel}[1]{\mathop{\mathsf{#1}}}
+
+\newcommand{\rlan}{\ensuremath{\rel{Ancestor}}}
+\newcommand{\rlpt}{\ensuremath{\rel{Parent}}}
+
+
+\begin{document}
+
+Steve McRea has been attempting to present what should be a simple and uncontroversial logical argument, has run into substantial resistance.
+I believe that there are two reasons for the resistance. The first is that his presentation of the logic has been poor. The second is that is argument obscures the point of controversy and debate instead of illuminates it.
+My goal here is to recast his argument in a way that clarifies it avoids the first problem and better identify the substantive points of debate.
+My recasting should be true to Steve's arguments, and I hope that he will accept it as merely a restatement of his argument.
+
+\section{Logical notation}
+
+The argument that he has given is presented using propositional symbolic logic.
+In recasting it, I will sometimes resort to first order predicate logic, mostly to make it easier to talk about certain parts of the argument, even if it isn't strictly necessary. The notation I will be using for propositional logic is shown in table~\ref{tab:prop}. 
+
+\begin{table}
+    \begin{center}
+    \begin{tabular}{cc}
+        \toprule
+        Symbol & Word \\
+        \midrule
+        $\land$ & and \\
+        $\lor$  &  or \\
+        $\lnot$ & not \\
+        $\lif$  & if \\
+        $\liff$ & if and only if \\
+        $p, q, r, \dots$ & various propositions \\
+        \bottomrule  
+    \end{tabular}
+    \caption[Propositional logic symbols]{Symbols for propositional logic with hints at what they kinda-sorta mean in English}\label{tab:prop}
+    \end{center}
+\end{table}
+
+I am not going to teach symbolic logic, but I will give a couple of examples to help people read those. If we let $p$ stand for the proposition "Jones owns a Ford" and we let the $q$ stand for the proposition that "Brown is in Barcelona", we could represent "Jones owns a Ford or Brown in in Barcelona" with $p \lor q$.
+We can represent more complicated things by building up expressions from the symbols.
+
+Propositional logic only allows for talking about the relationships between simple proposition without being able to look inside them.
+But suppose we want to talk about the relationship between notions like $\rlan$ and $\rlpt$. So if we want to say that Alice, $a$, is a direct ancestor of Bob, $b$, we could notate it with something like "$\rlan(a, b)$".
+
+
+
+
+
+
+
+
+
+\end{document}
