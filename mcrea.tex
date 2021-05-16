@@ -3,11 +3,12 @@
 \usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage{csquotes}
+\usepackage[standard]{ntheorem}
 
 \providecommand{\land}{\wedge}
 \providecommand{\lor}{\vee}
 \providecommand{\lif}{\rightarrow}
-\providecommand{\liff}{\leftrightarrow}
+\providecommand{\liff}{\iff}
 \providecommand{\lnot}{\neg}
 \providecommand{\lfalse}{\bot}
 \providecommand{\lall}{\forall}
@@ -18,14 +19,18 @@
 \newcommand{\rlpt}{\rel{Parent}}
 \newcommand{\rlapple}{\rel{Apple}}
 \newcommand{\rlfruit}{\rel{Fruit}}
+\newcommand{\rlbelieve}{\rel{Believe}}
+
+\newcommand{\rlatheist}{\rel{Atheist}}
+\newcommand{\rlwa}{\rel{WeakAtheist}}
+\newcommand{\rlagno}{\rel{Agnostic}}
+
 
 
 \begin{document}
 
-Steve McRea has been attempting to present what should be a simple and uncontroversial logical argument, has run into substantial resistance.
-I believe that there are two reasons for the resistance. The first is that his presentation of the logic has been poor. The second is that is argument obscures the point of controversy and debate instead of illuminates it.
-My goal here is to recast his argument in a way that clarifies it avoids the first problem and better identify the substantive points of debate.
-My recasting should be true to Steve's arguments, and I hope that he will accept it as merely a restatement of his argument.
+Steve McRea has been attempting to present what should be a simple and uncontroversial logical argument, but he has run into substantial resistance.
+I believe that there are two reasons for the resistance, but before discussing those, I want to first make sure that I (and perhaps others) properly understand his argument as he intends it.
 
 \section{Logical notation}
 
@@ -79,17 +84,70 @@ Note that \ref{exp:isapple} doesn't say that the thing that is the apple is the 
 Steve takes issues with Atheists who like to state that Atheism is a lack of belief.\footnote{I also think that the claim that “Atheism is a lack of belief” is silly, but for very different reasons than Steve does. I am, however, trying to present Steve's argument in this section.}
 The guts of the argument is that "lack of a belief about the existence of a god or gods is logically equivalent to agnosticism.
 
-Let's follow Steve's notation and use $g$ to denote the proposition that god/gods exist. I am going to depart
+Let's follow Steve's notation and use $g$ to denote the proposition that god (or gods) exist.
+I am going to depart from his notation by treating \rlbelieve\ as a two-place relation. So $\rlbelieve(x, p)$ is a way to say that individual $x$ believes proposition, $p$. This departure doesn't change anything of substance (yet), but is perhaps clearer as it corresponds more closely to English “believe”.
+
+What I most notably do differently is make explicit and clear how notions like (strong) Atheist, weak Atheist, and Agnostic are represented. Again, I am attempting to follow Steve's intent.
+
+In Definition~\ref{def:satheist} we define  \rlatheist\ in terms of \rlbelieve\ and $g$. Note that this definition is intended to correspond to what some call a strong Atheist.
+
+\begin{definition}[Atheist]\label{def:satheist}
+    An individual, $x$, is an atheist if and only if they believe that the proposition that $g$ that god exist is false.
+
+    \[
+        \lall x \rlatheist(x) \liff \rlbelieve(x, \lnot g)
+    \]
+\end{definition}
+
+The weak Atheist, by comparison neither believe that god(s) exist nor believe that god(s) don't exist. And that is what we intend to capture in Definition~\ref{def:weak}.
+
+\begin{definition}[Weak Atheist]\label{def:weak}
+    An individual, $x$, is a weak atheist if and only if they neither believe the proposition, $g$, that god(s) exist nor the proposition, $\lnot g$, that god(s) don't exist.
+    \[
+        \lall x \rlwa(x) \liff
+          \lnot\left[\rlbelieve(x, g) \lor \rlbelieve(x, \lnot g)\right]
+    \]
+\end{definition}
+
+Although we won't be using this, I will toss in the definition (\ref{def:theist}) for a theist, to server as a simple example of (and provide practice) for reading these sorts of definitions.
+
+\begin{definition}[Theist]\label{def:theist}
+    An individual, $x$, is theist if and only if they believe the proposition, $g$, that god(s) exist.
+    \[
+        \lall x \rel{Theist}(x) \liff \rlbelieve(x, g)
+    \]
+\end{definition}
+
+Finally, we come to the definition of agnostic within this system. They don't believe that god(s) exist and they don't believe that god(s) don't exist.
+This we attempt to capture in Definition~\ref{def:agnostic}.
+
+\begin{definition}[Agnostic]\label{def:agnostic}
+    An individual, $x$, is a agnostic if and only if they don't believe proposition, $g$, that god(s) exist and they don't believe the proposition, $\lnot g$, that god(s) don't exist.
+    \[
+        \lall x \rlagno(x) \liff
+          \lnot \rlbelieve(x, g) \land \lnot\rlbelieve(x, \lnot g)
+    \]
+\end{definition}
+
+Steve's argument (when recast this way) is that \rlwa\ and \rlagno\ are logically equivalent.
+And in that he is perfectly correct. We can prove that they are logically equivalent using only the tools of propositional logic.
+At a high level there are two steps to the proof. First we use (one half of) De~Morgan's Rule to show that $\lnot \rlbelieve(x, g) \land \lnot\rlbelieve(x, \lnot g)$ is the logically equivalent to $\lnot\left[\rlbelieve(x, g) \lor \rlbelieve(x, \lnot g)\right]$.
+
+\begin{theorem}[De~Morgan's Rule 1]
+    For any propositions $p$ and $q$ 
+    \[
+        \lnot\left(p \lor q\right) \liff \lnot p \land \lnot q
+    \]  
+\end{theorem}
 
 
+The second step is to show that if \rlwa and \rlagno are equivalent to the same thing, then they are equivalent to each other. That is, if $p$ is equivalent to $r$ and $q$ is equivalent to $r$ than $p$ is equivalent to $r$.\footnote{I could provide the full proofs of De Morgan's Rule and of the transitivity of equivalence, but doing so does not help illuminate the argument. Also, I would have to introduce the proof notation.}
 
+Anyway, from the above we can conclude \rlwa and \rlagno are the very same thing. The argument is sound and valid in logical terms.
 
+\section{The objections}
 
-
-
-
-
-
+\relax[To be continued after I confirm with Steve that I have correctly and fairly recast his argument]
 
 
 \end{document}
