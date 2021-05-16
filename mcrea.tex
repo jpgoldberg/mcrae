@@ -12,10 +12,12 @@
 \providecommand{\lfalse}{\bot}
 \providecommand{\lall}{\forall}
 \providecommand{\lis}{\exists}
-\newcommand{\rel}[1]{\mathop{\mathsf{#1}}}
+\newcommand{\rel}[1]{\ensuremath{\mathop{\mathsf{#1}}}}
 
-\newcommand{\rlan}{\ensuremath{\rel{Ancestor}}}
-\newcommand{\rlpt}{\ensuremath{\rel{Parent}}}
+\newcommand{\rlan}{\rel{Ancestor}}
+\newcommand{\rlpt}{\rel{Parent}}
+\newcommand{\rlapple}{\rel{Apple}}
+\newcommand{\rlfruit}{\rel{Fruit}}
 
 
 \begin{document}
@@ -39,7 +41,7 @@ In recasting it, I will sometimes resort to first order predicate logic, mostly 
         $\land$ & and \\
         $\lor$  &  or \\
         $\lnot$ & not \\
-        $\lif$  & if \\
+        $\lif$  & implies \\
         $\liff$ & if and only if \\
         $p, q, r, \dots$ & various propositions \\
         \bottomrule  
@@ -48,11 +50,39 @@ In recasting it, I will sometimes resort to first order predicate logic, mostly 
     \end{center}
 \end{table}
 
-I am not going to teach symbolic logic, but I will give a couple of examples to help people read those. If we let $p$ stand for the proposition "Jones owns a Ford" and we let the $q$ stand for the proposition that "Brown is in Barcelona", we could represent "Jones owns a Ford or Brown in in Barcelona" with $p \lor q$.
+I am not going to teach symbolic logic, but I will give a couple of examples to help people read those. If we let $p$ stand for the proposition “Jones owns a Ford” and we let the $q$ stand for the proposition that “Brown is in Barcelona”, we could represent “Jones owns a Ford or Brown in in Barcelona” with $p \lor q$.
 We can represent more complicated things by building up expressions from the symbols.
 
 Propositional logic only allows for talking about the relationships between simple proposition without being able to look inside them.
-But suppose we want to talk about the relationship between notions like $\rlan$ and $\rlpt$. So if we want to say that Alice, $a$, is a direct ancestor of Bob, $b$, we could notate it with something like "$\rlan(a, b)$".
+But suppose we want to talk about the relationship between notions like $\rlapple$ and $\rlfruit$. So say that some thing, $t$ is an apple we would say $\rlapple(t)$.
+
+We might want to be able to say that if something is an apple it is a fruit.
+For this we need a way to talk about all things. And the notation for that is the universal quantifier ($\lall$), which you can read as “for all.” So one way to represent “all apples are fruits” is to say that if for anything that it is an apple that this is also a fruit. And that is what we have in expression \ref{exp:allapple}.
+
+\begin{equation}\label{exp:allapple}
+    \lall x \rlapple(x) \lif \rlfruit(x)
+\end{equation}
+
+$\rlan$ and $\rlpt$. So if we want to say that Alice, $a$, is a direct ancestor of Bob, $b$, we could notate it with something like “$\rlan(a, b)$”.
+
+We might also want to say things like an apple exists, then a fruit exists.
+We can do that using what is called the existential quantifier ($\lis$), which you can read is “there is.” This is exemplified in \ref{exp:isapple}.
+
+\begin{equation}\label{exp:isapple}
+    \lis x \rlapple(x) \lif \lis y \rlfruit(y)
+\end{equation}
+
+Note that \ref{exp:isapple} doesn't say that the thing that is the apple is the fruit.\footnote{Don't worry about this. It just means I should have found a better example that doesn't add in that extra confusion.}
+
+\section{Steve's first argument}
+
+Steve takes issues with Atheists who like to state that Atheism is a lack of belief.\footnote{I also think that the claim that “Atheism is a lack of belief” is silly, but for very different reasons than Steve does. I am, however, trying to present Steve's argument in this section.}
+The guts of the argument is that "lack of a belief about the existence of a god or gods is logically equivalent to agnosticism.
+
+Let's follow Steve's notation and use $g$ to denote the proposition that god/gods exist. I am going to depart
+
+
+
 
 
 
