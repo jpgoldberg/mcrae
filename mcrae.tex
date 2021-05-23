@@ -1,3 +1,4 @@
+% !TEX TS-program = xelatex
 \documentclass[12pt]{article}
 
 \usepackage{amsmath}
@@ -66,7 +67,7 @@ In recasting it, I will sometimes resort to first order predicate logic, mostly 
     \end{center}
 \end{table}
 
-I am not going to teach symbolic logic, but I will give a couple of examples to help people read those. If we let $p$ stand for the proposition “Jones owns a Ford” and we let the $q$ stand for the proposition that “Brown is in Barcelona”, we could represent “Jones owns a Ford or Brown in in Barcelona” with $p \lor q$.
+I am not going to teach symbolic logic, but I will give a couple of examples to help people read those. If we let $p$ stand for the proposition “Jones owns a Ford” and we let the $q$ stand for the proposition that “Brown is in Barcelona”, we could represent “Jones owns a Ford or Brown is in Barcelona” with $p \lor q$.
 We can represent more complicated things by building up expressions from the symbols.
 
 Propositional logic only allows for talking about the relationships between simple proposition without being able to look inside them.
@@ -90,15 +91,15 @@ We can do that using what is called the existential quantifier ($\lis$), which y
 
 Note that \ref{exp:isapple} doesn't say that the thing that is the apple is the fruit.\footnote{Don't worry about this. It just means I should have found a better example that doesn't add in that extra confusion.}
 
-\section{Steve's first argument}\label{sec:first}
+\section{SM's first argument}\label{sec:first}
 
-Steve takes issues with Atheists who like to state that Atheism is a lack of belief.\footnote{I also think that the claim that “Atheism is a lack of belief” is silly, but for very different reasons than Steve does. I am, however, trying to present Steve's argument in this section.}
+SM takes issues with Atheists who like to state that Atheism is a lack of belief.\footnote{I also think that the claim that “Atheism is a lack of belief” is silly, but for very different reasons than SM does. I am, however, trying to present SM's argument in this section.}
 The guts of the argument is that "lack of a belief about the existence of a god or gods is logically equivalent to agnosticism.
 
-Let's follow Steve's notation and use $g$ to denote the proposition that god (or gods) exist.
+Let's follow SM's notation and use $g$ to denote the proposition that god (or gods) exist.
 I am going to depart from his notation by treating \rlbelieve\ as a two-place relation. So $\rlbelieve(x, p)$ is a way to say that individual $x$ believes proposition, $p$. This departure doesn't change anything of substance (yet), but is perhaps clearer as it corresponds more closely to English “believe”.
 
-What I most notably do differently is make explicit and clear how notions like (strong) Atheist, weak Atheist, and Agnostic are represented. Again, I am attempting to follow Steve's intent.
+What I most notably do differently is make explicit and clear how notions like (strong) Atheist, weak Atheist, and Agnostic are represented. Again, I am attempting to follow SM's intent.
 
 In Definition~\ref{def:satheist} we define  \rlatheist\ in terms of \rlbelieve\ and $g$. Note that this definition is intended to correspond to what some call a strong Atheist.
 
@@ -140,7 +141,7 @@ This we attempt to capture in Definition~\ref{def:agnostic}.
     \]
 \end{definition}
 
-Steve's argument (when recast this way) is that \rlwa\ and \rlagno\ are logically equivalent.
+SM's argument (when recast this way) is that \rlwa\ and \rlagno\ are logically equivalent.
 And in that he is perfectly correct. We can prove that they are logically equivalent using only the tools of propositional logic.
 At a high level there are two steps to the proof. First we use (one half of) De~Morgan's Rule to show that $\lnot \rlbelieve(x, g) \land \lnot\rlbelieve(x, \lnot g)$ is the logically equivalent to $\lnot\left[\rlbelieve(x, g) \lor \rlbelieve(x, \lnot g)\right]$.
 
@@ -166,8 +167,8 @@ But if definition~\ref{def:agnostic} fails to capture some important and relevan
 
 I believe that definition~\ref{def:agnostic} fails to capture what people mean when they say that they (or someone) is agnostic.
 Unfortunately, the logical frameworks that we've been using do not really have the capacity to capture the relevant aspects of the meaning of agnostic.
-In fact, it may be the much of the dispute and confusion over Steve's argument has been an indirect consequence to trying to model agnosticism in a logical system that unequipped to represent it.
-Furthermore, I feel that Steve's original presentation failed to make the definitions of weak atheist and agnosticism sufficiently explicit.
+In fact, it may be the much of the dispute and confusion over SM's argument has been an indirect consequence to trying to model agnosticism in a logical system that unequipped to represent it.
+Furthermore, I feel that SM's original presentation failed to make the definitions of weak atheist and agnosticism sufficiently explicit.
 As a consequence, a number of people knew that they didn't like his argument, but were hard-pressed to identify their objection.
 My goal in this section is to identify that objection. 
 
@@ -213,8 +214,8 @@ Carol from our example cannot say, prior to learning of the incident, “I am un
 This distinction between being uncertain about something and not having a belief about it
 is not represented in the difference between definitions \ref{def:weak}~and~\ref{def:agnostic}.
 Indeed, those two definitions are logically equivalent to each other.
-One could almost say that Steve's demonstration that those two are logically equivalent suggests that there is something wrong with at least one of the definitions.
-Steve's argument is logically sound, but it doesn't tell us about agnosticism in a sense that anyone really cares about.
+One could almost say that SM's demonstration that those two are logically equivalent suggests that there is something wrong with at least one of the definitions.
+SM's argument is logically sound, but it doesn't tell us about agnosticism in a sense that anyone really cares about.
 
 In definition~\ref{def:love} I give a ridiculous definition of \rllove.
 It is, however, a definition, and I have some freedom to define terms as I wish as long as I am clear about them.
@@ -232,7 +233,7 @@ Again, I have explicitly given the definition, and I am free to define things in
 \begin{definition}[Hate {[ridiculous definition]}]\label{def:hate}
     \rlhate\ is the base of compound interest.
     \[
-     \rlhate =  \lim_{n \to \infty}\left( 1 + \frac{1}{n}\right)^n 
+     \rlhate =  \lim_{x \to \infty}\left( 1 + \frac{1}{x}\right)^x 
     \]   
 \end{definition}
 
@@ -245,14 +246,14 @@ that \rllove\ and \rlhate\ are the very same thing.
 My proof would be sound and valid, but it would tell us nothing interesting about love and hate.
 
 If I were to present that as an argument that love and hate were logically indistinguishable I should expect to be laughed at.
-Steve's argument, while flawed in the identical way, is not as ridiculous.
+SM's argument, while flawed in the identical way, is not as ridiculous.
 My definitions of \rllove\ and \rlhate\ are transparently and deliberately missing the mark on capturing what we might want to capture in a definition of love and hate.
-Steve's definition~(\ref{def:agnostic}) of \rlagno\ misses its mark,
+SM's definition~(\ref{def:agnostic}) of \rlagno\ misses its mark,
 but it does so in a far less obvious way.
 
 \section{Right (for the wrong reason)}
 
-Despite my objections in section~\ref{sec:object}, I do agree with Steve that it is silly to claim to be a weak atheist. That is what I will get to in this section when I write it.
+Despite my objections in section~\ref{sec:object}, I do agree with SM that it is silly to claim to be a weak atheist. That is what I will get to in this section when I write it.
 
 
 \end{document}
