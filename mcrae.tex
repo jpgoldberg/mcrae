@@ -2,6 +2,10 @@
 \documentclass[12pt]{article}
 
 \usepackage{amsmath}
+
+\usepackage[backend=biber]{biblatex-chicago}
+\addbibresource{philosophy.bib}
+
 \usepackage{booktabs}
 \usepackage{csquotes}
 \usepackage[standard]{ntheorem}
@@ -93,8 +97,9 @@ Note that \ref{exp:isapple} doesn't say that the thing that is the apple is the 
 
 \section{SM's first argument}\label{sec:first}
 
-SM takes issues with Atheists who like to state that Atheism is a lack of belief.\footnote{I also think that the claim that “Atheism is a lack of belief” is silly, but for very different reasons than SM does. I am, however, trying to present SM's argument in this section.}
-The guts of the argument is that "lack of a belief about the existence of a god or gods is logically equivalent to agnosticism.
+SM takes issues with Atheists who like to state that Atheism is a lack of belief.
+The guts of the argument is that if we take weak Atheism to be a lack of beliefs about the existence (or non-existence) of god(s) and if we take Agnosticism as neither having a belief that god(s) exist nor a belief that god(s) don't exist then the two are the same.
+I whole heartedly agree. Although I don't see any particular value in spelling that simple claim in terms of a logical proof, SM does and so I re-cast it here.
 
 Let's follow SM's notation and use $g$ to denote the proposition that god (or gods) exist.
 I am going to depart from his notation by treating \rlbelieve\ as a two-place relation. So $\rlbelieve(x, p)$ is a way to say that individual $x$ believes proposition, $p$. This departure doesn't change anything of substance (yet), but is perhaps clearer as it corresponds more closely to English “believe”.
@@ -168,6 +173,7 @@ But if definition~\ref{def:agnostic} fails to capture some important and relevan
 I believe that definition~\ref{def:agnostic} fails to capture what people mean when they say that they (or someone) is agnostic.
 Unfortunately, the logical frameworks that we've been using do not really have the capacity to capture the relevant aspects of the meaning of agnostic.
 In fact, it may be the much of the dispute and confusion over SM's argument has been an indirect consequence to trying to model agnosticism in a logical system that unequipped to represent it.
+
 Furthermore, I feel that SM's original presentation failed to make the definitions of weak atheist and agnosticism sufficiently explicit.
 As a consequence, a number of people knew that they didn't like his argument, but were hard-pressed to identify their objection.
 My goal in this section is to identify that objection. 
@@ -220,6 +226,13 @@ SM's argument is logically sound, but it doesn't tell us about agnosticism in a 
 In definition~\ref{def:love} I give a ridiculous definition of \rllove.
 It is, however, a definition, and I have some freedom to define terms as I wish as long as I am clear about them.
 
+\subsection{Justified false beliefs (about beliefs)}
+
+I must thank SM for pointing me (personal communication) to philosophical literature that supports the definition of Agnosticism he uses.
+SM (pc) has pointed to this from \cite{sep-atheism-agnosticism}.
+
+
+
 \begin{definition}[Love {[ridiculous definition]}]\label{def:love}
     \rllove\ is an infinite sum!
     \[
@@ -255,5 +268,5 @@ but it does so in a far less obvious way.
 
 Despite my objections in section~\ref{sec:object}, I do agree with SM that it is silly to claim to be a weak atheist. That is what I will get to in this section when I write it.
 
-
+\printbibliography
 \end{document}
