@@ -6,6 +6,17 @@
 \usepackage[authordate,backend=biber]{biblatex-chicago}
 \addbibresource{philosophy.bib}
 
+\DeclareCiteCommand{\citetbooktitle}
+  {\boolfalse{citetracker}%
+   \boolfalse{pagetracker}%
+   \usebibmacro{prenote}}
+  {\ifciteindex
+     {\indexfield{indextitle}}
+     {}%
+   \printfield{booktitle}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
 \usepackage{booktabs}
 \usepackage{csquotes}
 \usepackage[standard]{ntheorem}
@@ -271,6 +282,7 @@ My criticism of SM's definition applies to others who use equivalent definition 
 SM also points out that \textcite{Demey:2019vb} makes use of \citeauthor{Burgess-Jackson:2018ul}'s definitions, but it is clear that \citeauthor{Demey:2019vb} is only looking at the formal structure of the argument and not examining or endorsing any of the particular definitions. Whatever value there may be in \citeauthor{Demey:2019vb}'s Aristotelian diagrams, for the current purpose all they do is further obscure the fact agnosticism has been defined, with little justification, in a way that makes it indistinguishable from weak atheism. Using ever more complicated and abstract machinery to prove that the definitions are equivalent does nothing to advance substantive arguments.
 
 SM (pc) has pointed has also pointed to the
+%\citebooktitle{sep-atheism-agnosticism}
 Stanford Encyclopedia of Philosophy
 article \citetitle{sep-atheism-agnosticism}, which includes 
 \begin{quotation}
