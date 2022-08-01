@@ -95,8 +95,6 @@ For this we need a way to talk about all things. And the notation for that is th
     \lall x \rlapple(x) \lif \rlfruit(x)
 \end{equation}
 
-$\rlan$ and $\rlpt$. So if we want to say that Alice, $a$, is a direct ancestor of Bob, $b$, we could notate it with something like “$\rlan(a, b)$”.
-
 We might also want to say things like an apple exists, then a fruit exists.
 We can do that using what is called the existential quantifier ($\lis$), which you can read is “there is.” This is exemplified in \ref{exp:isapple}.
 
@@ -105,6 +103,18 @@ We can do that using what is called the existential quantifier ($\lis$), which y
 \end{equation}
 
 Note that \ref{exp:isapple} doesn't say that the thing that is the apple is the fruit.\footnote{Don't worry about this. It just means I should have found a better example that doesn't add in that extra confusion.}
+
+As a further example, let's consider $\rlan$ and $\rlpt$. So if we want to say that Alice, $a$, is a direct ancestor of Bob, $b$, we could notate it with something like “$\rlan(a, b)$”.
+If we want to say that any ancestor of an ancestor is an ancestor we could write
+
+\begin{equation}\label{eq:anctrans}
+    \lall a, b, c \rlan(b, a) \land \rlan(c, b) \lif \rlan(c, a)
+\end{equation}
+
+The fancy-schamancy name for that is that the $\rlan$ instantiates the transitive property.\footnote{%
+    If this were a text on predicate logic,
+    I would show how to define \rlan\ in terms of \rlpt\
+    in such a way that the transitivity of \rlan\ would follow logically from the definition.}
 
 \section{SM's first argument}\label{sec:first}
 
@@ -137,7 +147,7 @@ The weak Atheist, by comparison neither believe that god(s) exist nor believe th
     \]
 \end{definition}
 
-Although we won't be using this, I will toss in the definition (\ref{def:theist}) for a theist, to server as a simple example of (and provide practice) for reading these sorts of definitions.
+Although we won't be using this, I will toss in the definition (\ref{def:theist}) for a theist, to serve as a simple example of (and provide practice) for reading these sorts of definitions.
 
 \begin{definition}[Theist]\label{def:theist}
     An individual, $x$, is theist if and only if they believe the proposition, $g$, that god(s) exist.
@@ -284,7 +294,7 @@ It appears that in terms of both definitions and logical notion, SM is following
        [i] nonbelief that God exists, or “\textasciitilde Bsg,” and
        [ii] nonbelief that God does not exist, or “\textasciitilde Bs\textasciitilde g”).
 \end{quotation}
-My criticism of SM's definition applies to others who use equivalent definition in contexts where states of belief matter, although it is not immediately clear whether belief states do matter for \citeauthor{}{Burgess-Jackson:2018ul}'s argument.
+My criticism of SM's definition applies to others who use equivalent definition in contexts where states of belief matter, although it is not immediately clear whether belief states do matter for \citeauthor{Burgess-Jackson:2018ul}'s argument.
 
 SM also points out that \textcite{Demey:2019vb} makes use of \citeauthor{Burgess-Jackson:2018ul}'s definitions, but it is clear that \citeauthor{Demey:2019vb} is only looking at the formal structure of the argument and not examining or endorsing any of the particular definitions. Whatever value there may be in \citeauthor{Demey:2019vb}'s Aristotelian diagrams, for the current purpose all they do is further obscure the fact agnosticism has been defined, with little justification, in a way that makes it indistinguishable from weak atheism. Using ever more complicated and abstract machinery to prove that the definitions are equivalent does nothing to advance substantive arguments.
 
